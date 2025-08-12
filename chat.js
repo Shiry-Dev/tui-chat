@@ -68,7 +68,8 @@ function start() {
 		role = (answerRole || 'guest').trim();
 		rl.setPrompt(`${role}: `);
 
-		ws = new WebSocket('ws://localhost:8080');
+		// ws = new WebSocket('ws://localhost:8080');
+		ws = new WebSocket('https://websocket-chat-i936.onrender.com/');
 
 		ws.on('open', () => {
 			if (role === 'owner') {
